@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css?family=Expletus+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow: hidden;
+  min-width: 100vh;
+  font-family: "Expletus Sans", cursive;
+}
+.carousel {
+  display: flex;
+  min-width: 600px;
+  max-width: 900px;
+  height: 400px;
+  margin: 4rem auto;
+}
+.image {
+  min-width: 60px;
+  margin: 10px;
+  cursor: pointer;
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+  overflow: hidden;
+  position: relative;
+}
+.image.active {
+  flex-grow: 100;
+  max-width: 600px;
+  margin: 0;
+  border-radius: 7px;
+  background-size: auto 100%;
+}
+.image:not(.active) {
+  flex-grow: 1;
+  border-radius: 5px;
+}
+.image1 {
+  background: url(./media/basic-pics/1.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+.image2 {
+  background: url(./media/basic-pics/2.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+.image3 {
+  background: url(./media/basic-pics/3.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+.image4 {
+  background: url(./media/basic-pics/4.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+.image5 {
+  background: url(./media/basic-pics/5.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
+.text-contaigner {
+  width: 100%;
+  height: 400px;
+  padding: 2rem;
+  visibility: hidden;
+  transform: translateY(400px);
+  opacity: 0;
+  transition: all 0.4s ease;
+  background: linear-gradient(354deg, black 0%, transparent 72%);
+  color: white;
+  overflow: hidden;
+}
+.text {
+  position: absolute;
+  bottom: 5rem;
+}
+
+.active .text-contaigner {
+  visibility: visible;
+  transform: translateY(0);
+  opacity: 1;
+}
